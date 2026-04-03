@@ -1,3 +1,12 @@
+---
+title: Cold-Chain Supply OpenEnv
+emoji: ❄️
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
+
 # Cold-Chain Supply OpenEnv
 
 A complete real-world OpenEnv environment for training AI agents on cold-chain vaccine distribution decisions.
