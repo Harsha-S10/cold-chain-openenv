@@ -1,0 +1,63 @@
+# ❄️ Cold-Chain Supply OpenEnv
+
+A real-world OpenEnv environment for optimizing **cold-chain vaccine distribution**, focusing on maintaining temperature integrity, minimizing cost, and improving supply efficiency.
+
+---
+
+## 🚀 Project Overview
+
+This environment simulates real-world cold-chain logistics where an AI agent learns to:
+
+- Maintain vaccine temperature stability
+- Optimize shipment routing
+- Balance cost, waste, and reliability
+- Handle supply chain uncertainties
+
+---
+
+## 🔗 Links
+
+- 🌐 Hugging Face Space:  
+  https://huggingface.co/spaces/Harshly1005/cold-chain-openenv
+
+- 💻 GitHub Repository:  
+  https://github.com/Harsha-S10/cold-chain-openenv
+
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint     | Description |
+|--------|-------------|-------------|
+| GET    | `/`         | Health check |
+| POST   | `/reset`    | Reset environment |
+| POST   | `/step`     | Perform action |
+| GET    | `/state`    | Get current state |
+| GET    | `/tasks`    | List available tasks |
+
+---
+
+## 🧩 Tasks
+
+### 🟢 Easy — Stock Stability
+- Maintain inventory above threshold
+- Avoid stockouts
+
+### 🟡 Medium — Routing Efficiency
+- Optimize delivery routes
+- Minimize cost and time
+
+### 🔴 Hard — Full Optimization
+- Balance:
+  - Cost
+  - Resilience
+  - Waste reduction
+  - Cold-chain integrity
+
+---
+
+## 🛠️ Run Locally
+
+```bash
+pip install -r requirements.txt
+uvicorn app:app --host 0.0.0.0 --port 7860
