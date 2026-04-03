@@ -1,0 +1,56 @@
+name: cold-chain-supply-openenv
+version: "1.0.0"
+description: >
+  A real-world cold-chain vaccine distribution environment where an AI agent
+  optimizes procurement, routing, supplier risk, and spoilage outcomes.
+author: your-github-username
+license: MIT
+
+tasks:
+  - id: task_easy
+    name: Clinic Stock Stability
+    difficulty: easy
+    max_steps: 12
+    score_range: [0.0, 1.0]
+  - id: task_medium
+    name: Regional Routing Efficiency
+    difficulty: medium
+    max_steps: 16
+    score_range: [0.0, 1.0]
+  - id: task_hard
+    name: Resilient Cold-Chain Optimization
+    difficulty: hard
+    max_steps: 22
+    score_range: [0.0, 1.0]
+
+api:
+  reset: POST /reset
+  step: POST /step
+  state: GET /state
+
+observation_space:
+  type: dict
+  fields:
+    - day: int
+    - budget: float
+    - active_supplier: str
+    - cold_chain_integrity: float
+    - inventory: dict
+    - pending_orders: list
+    - deliveries_completed: int
+    - deliveries_on_time: int
+    - unmet_demand_units: int
+    - spoilage_units: int
+    - emissions_kg: float
+
+action_space:
+  type: dict
+  fields:
+    - type: str  # procure | dispatch | switch_supplier | maintenance | wait
+    - item: str
+    - quantity: int
+    - supplier: str
+    - expedited: bool
+    - route: str
+    - units: int
+    - spend: float
